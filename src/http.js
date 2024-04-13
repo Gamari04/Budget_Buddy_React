@@ -1,7 +1,11 @@
 import axios from 'axios';
-export default axios.create({
-    baseURL:"http://localhost:8000/api",
-    headers:{
-        "Content-type":"application/json"
-    }
-})
+
+const http = axios.create({
+  baseURL: 'http://localhost:8000/api',
+  withCredentials: true,
+});
+
+
+const token = localStorage.getItem("token");
+http.defaults.headers.common["Authorization"]=`Bearer ${token}`
+export default http

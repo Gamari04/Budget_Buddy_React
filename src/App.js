@@ -5,6 +5,7 @@ import {Routes, Route, Link } from "react-router-dom";
 import Create from './pages/Create'
 import NotFound from './pages/NotFound';
 import Home from './pages/Home';
+import RegisterPage from './pages/Register';
 function App() {
   return (
     <div>
@@ -16,6 +17,9 @@ function App() {
              <li className='nav-item'>
               <Link to={"/create"} className='nav-link'>Create</Link>
              </li>
+             <li className='nav-item'>
+              <Link to={"/register"} className='nav-link'>Register</Link>
+             </li>
          </div>
      </nav>
      <div className='container'>
@@ -23,6 +27,7 @@ function App() {
            <Route path='/' element={<Home />}/>
            <Route path='/create' element={<Create />}/>
            <Route path='/*' element={<NotFound />}/>
+           <Route path='/register' element={<RegisterPage />}/>
         </Routes>
      </div>
     </div>
