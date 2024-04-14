@@ -1,7 +1,7 @@
 import { useContext, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import http from "../http";
-import AuthContext from "../context/AuthContext";
+import AuthContext from "./../context/AuthContext";
 
 const Register = () => {
 
@@ -13,6 +13,7 @@ const Register = () => {
   const {setUser,  setIsAuthenticated, setToken } = useContext(AuthContext)
 
 
+  
   const navigate = useNavigate();
 
   const handelRegister = async (event) => {
