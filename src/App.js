@@ -6,8 +6,9 @@ import Create from './pages/Create'
 import NotFound from './pages/NotFound';
 import Home from './pages/Home';
 import Register from './pages/Register';
-import Expenses from './pages/Expenses';
-import AddExpense from './pages/AddExpense';
+import Expenses from './pages/Expense/Expenses';
+import AddExpense from './pages/Expense/AddExpense';
+import Edit from './pages/Expense/Edit';
 
 function App() {
   return (
@@ -36,6 +37,7 @@ function App() {
             <Route path='/addExpense' element={<AddExpense />} />
             <Route path='/register' element={<Register />} /> {/* Register ici */}
             <Route path='/expenses' element={<Expenses />} />
+            <Route path='/expenses/:expenseId/edit' element={<Edit />} />
             <Route path='/*' element={<NotFound />} />
           </Routes>
         </div>

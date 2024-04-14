@@ -1,5 +1,5 @@
 import { useState } from "react";
-import http from "../http";
+import http from "../../http";
 import { useNavigate } from "react-router-dom";
 
 const AddExpense = () => {

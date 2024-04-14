@@ -1,7 +1,7 @@
 import {useEffect, useState } from "react";
-import http from "../http";
+import http from "../../http";
 import { Link } from "react-router-dom";
-
+import ExpenseDeleteButton from "../../components/ExpenseDeleteButton";
 
 const Expenses = () => {
   const [expenses, setExpenses] = useState([]);
@@ -27,7 +27,7 @@ const Expenses = () => {
         <h2 className="text-lg font-medium text-gray-800 dark:text-white">My expences</h2>
 
         <div className="flex items-center mt-4 gap-x-3">
-            <Link to="/addExpense"  className="w-1/2 px-5 py-2 text-sm text-gray-800 transition-colors duration-200 bg-white border rounded-lg sm:w-auto dark:hover:bg-gray-800 dark:bg-gray-900 hover:bg-gray-100 dark:text-white dark:border-gray-700">
+            <Link to="/addExpense"  className="w-1/2 px-5 py-2 text-sm text-gray-800 transition-colors duration-200 bg-white border rounded-lg sm:w-auto dark:hover:bg-gray-800 dark:bg-gray-900 hover:bg-blue-500 dark:text-white dark:border-blue-500">
                Add an expence
             </Link>
             
@@ -104,7 +104,7 @@ const Expenses = () => {
                       </td>
                       <td className="px-4 py-4 text-sm whitespace-nowrap">
                         <div className="flex items-center gap-x-6">
-                          {/* <ExpenseDeleteButton expenseId={expense.id}/> */}
+                          <ExpenseDeleteButton expenseId={expense.id}/>
 
                           <Link to={`/expenses/${expense.id}/edit`} className="text-gray-500 transition-colors duration-200 dark:hover:text-yellow-500 dark:text-gray-300 hover:text-yellow-500 focus:outline-none">
                           <svg
